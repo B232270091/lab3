@@ -1,0 +1,12 @@
+{
+  "name": "lab3",
+  "version": "1.0.0",
+  "private": true,
+  "description": "F.CSA313 лаборатори 3: чанарын сценарио, SLO, k6 threshold",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "author": "Ган-Оргил B232270091",
+  "dependencies": {}
+}
