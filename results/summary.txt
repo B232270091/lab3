@@ -29,3 +29,25 @@ http_req_duration{name:cart} p(95)<20: PASS
 http_req_duration{name:report} p(95)<100: FAIL
 checks rate>=0.90: PASS
 http_req_failed{name:pay} rate<0.08: PASS
+
+[chaos]
+requests=5661; successes=4960; failures=701
+requests_per_second=46.663046
+cart_p95_ms=1.5667
+report_p95_ms=397.3397
+pay_requests=1887; pay_failures=281
+pay_error_percent=14.8914
+pay_application_error_percent=4.1766
+availability_percent=87.6170
+http_req_failed_percent=12.3830
+exit_code=99
+checks rate>=0.90: FAIL
+recovery_ms p(95)<12000: PASS
+http_req_duration{name:cart} p(95)<20: PASS
+http_req_duration{name:report} p(95)<450: PASS
+http_req_failed{name:pay} rate<0.08: FAIL
+recovery_p95_ms=11030.0500
+observed_downtime_ms=10333
+nominal_window_seconds=120; time_error_budget_seconds=12
+time_availability_percent=91.3892
+request_error_budget=566; actual_failures=701; excess_failures=135
