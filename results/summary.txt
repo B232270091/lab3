@@ -1,0 +1,31 @@
+[pass]
+requests=2772; successes=2734; failures=38
+requests_per_second=45.226091
+cart_p95_ms=1.6062
+report_p95_ms=395.2280
+pay_requests=924; pay_failures=38
+pay_error_percent=4.1126
+pay_application_error_percent=4.1126
+availability_percent=98.6291
+http_req_failed_percent=1.3709
+exit_code=0
+http_req_duration{name:cart} p(95)<20: PASS
+http_req_duration{name:report} p(95)<450: PASS
+http_req_failed{name:pay} rate<0.08: PASS
+checks rate>=0.90: PASS
+
+[fail]
+requests=2784; successes=2734; failures=50
+requests_per_second=45.353137
+cart_p95_ms=1.7299
+report_p95_ms=398.1218
+pay_requests=928; pay_failures=50
+pay_error_percent=5.3879
+pay_application_error_percent=5.3879
+availability_percent=98.2040
+http_req_failed_percent=1.7960
+exit_code=99
+http_req_duration{name:cart} p(95)<20: PASS
+http_req_duration{name:report} p(95)<100: FAIL
+checks rate>=0.90: PASS
+http_req_failed{name:pay} rate<0.08: PASS

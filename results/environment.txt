@@ -1,0 +1,5 @@
+node --version
+v24.22.1
+k6 version
+k6.exe v1.8.3 (commit/58bbfd8e48, go1.26.11, windows/amd64)
+platform=win32/x64
